@@ -1,0 +1,217 @@
+/* ===== DESAIN WEBSITE: CSS ===== */
+* {
+  box-sizing: border-box;
+} /* Perhitungan lebar elemen lebih mudah */
+html {
+  scroll-behavior: smooth;
+} /* Gulir halaman terasa halus */
+body {
+  margin: 0; /* Hilangkan jarak bawaan browser */
+  font-family: 'Segoe UI', Arial, sans-serif; /* Jenis huruf */
+  color: #eaf1ff; /* Warna tulisan utama */
+  background: #081225; /* Warna dasar halaman */
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 12% 14%, #243a79 0, transparent 35%),
+    radial-gradient(circle at 87% 76%, #164d56 0, transparent 33%);
+  opacity: 0.65;
+  z-index: 0; /* Gradasi di belakang konten */
+}
+a {
+  color: inherit;
+  text-decoration: none;
+} /* Menghapus garis bawah link */
+.wadah {
+  position: relative;
+  z-index: 1;
+  width: min(1080px, 92%);
+  margin: auto;
+} /* Batas lebar halaman */
+.navigasi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 0;
+  gap: 16px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.logo span {
+  color: #65e3c6;
+} /* Aksen pada logo */
+.tautan-nav {
+  color: #b3c5e2;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tautan-nav:hover {
+  color: #65e3c6;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 0 72px;
+}
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 14px;
+  border: 1px solid #365474;
+  border-radius: 99px;
+  background: #132540;
+  font-size: 12px;
+  color: #8ef1d9;
+  font-weight: 700;
+}
+.status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+}
+h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.12;
+  margin: 24px 0 14px;
+  letter-spacing: -2px;
+}
+h1 em {
+  color: #65e3c6;
+  font-style: normal;
+}
+.deskripsi {
+  color: #afc1db;
+  line-height: 1.85;
+  max-width: 570px;
+  font-size: 16px;
+}
+.tombol-utama {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 15px 23px;
+  border-radius: 13px;
+  background: #65e3c6;
+  color: #082330;
+  font-weight: 800;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tombol-utama:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px #65e3c644;
+}
+.avatar-bingkai {
+  display: grid;
+  place-items: center;
+  width: min(290px, 100%);
+  aspect-ratio: 1;
+  margin: auto;
+  border-radius: 32px;
+  border: 1px solid #33516d;
+  background: linear-gradient(145deg, #263a75, #12665d);
+  box-shadow: 0 26px 60px #0005;
+  transform: rotate(5deg);
+}
+.avatar {
+  font-size: clamp(84px, 15vw, 140px);
+  transform: rotate(-5deg);
+}
+.bagian {
+  padding: 24px 0 64px;
+}
+.judul-bagian {
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+.subjudul {
+  margin: 0 0 26px;
+  color: #9fb3cf;
+  line-height: 1.7;
+}
+.keahlian {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+.tag {
+  border: 1px solid #2d4562;
+  background: #11223b;
+  padding: 10px 15px;
+  border-radius: 99px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.grid-karya {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.kartu {
+  padding: 24px;
+  border: 1px solid #2b4362;
+  border-radius: 20px;
+  background: #12223a;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.kartu:hover {
+  transform: translateY(-6px);
+  border-color: #65e3c6;
+}
+.ikon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  font-size: 28px;
+  border-radius: 14px;
+  background: #20395a;
+}
+.kartu h3 {
+  font-size: 19px;
+  margin: 19px 0 8px;
+}
+.kartu p {
+  color: #afc1db;
+  line-height: 1.6;
+  font-size: 14px;
+  min-height: 66px;
+}
+.kartu a {
+  color: #65e3c6;
+  font-weight: 700;
+  font-size: 14px;
+}
+footer {
+  padding: 30px 0 48px;
+  border-top: 1px solid #243751;
+  text-align: center;
+  color: #8199b9;
+  font-size: 13px;
+}
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+  .avatar-bingkai {
+    width: 200px;
+    grid-row: 1;
+  }
+  .grid-karya {
+    grid-template-columns: 1fr;
+  }
+  .kartu p {
+    min-height: unset;
+  }
+}
